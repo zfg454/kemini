@@ -22,7 +22,7 @@ EMAIL_USERNAME="${RANDOM_CHARS}${TIMESTAMP:(-4)}"
 RANDOM_PREFIX_PART=$(cat /dev/urandom | tr -dc 'a-z' | fold -w 5 | head -n 1)
 RANDOM_SUFFIX_PART=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 3 | head -n 1)
 PROJECT_PREFIX="${RANDOM_PREFIX_PART}Vul${RANDOM_SUFFIX_PART}"
-TOTAL_PROJECTS=75
+TOTAL_PROJECTS=50
 MAX_PARALLEL_JOBS=40
 # 动态全局等待时间计算函数
 calculate_global_wait_seconds() {
