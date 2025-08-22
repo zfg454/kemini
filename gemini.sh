@@ -5,7 +5,7 @@
 TIMESTAMP=$(date +%s)
 RANDOM_CHARS=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 4 | head -n 1)
 EMAIL_USERNAME="momo${RANDOM_CHARS}${TIMESTAMP:(-4)}"
-PROJECT_PREFIX="gemini-key"
+PROJECT_PREFIX=$(cat /dev/urandom | tr -dc 'A-Z0-9' | fold -w 12 | head -n 1)
 TOTAL_PROJECTS=50  # 默认项目数 (可能会根据配额检查结果自动调整)
 MAX_PARALLEL_JOBS=20  # 默认设置为20
 MAX_RETRY_ATTEMPTS=3  # 重试次数
