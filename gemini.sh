@@ -12,7 +12,7 @@ TOTAL_PROJECTS=49  # 默认项目数 (可能会根据配额检查结果自动调
 MAX_PARALLEL_JOBS=20  # 默认设置为20
 MAX_RETRY_ATTEMPTS=3  # 重试次数
 # 只保留纯密钥和逗号分隔密钥文件
-PURE_KEY_FILE="$current_account.txt"
+PURE_KEY_FILE="${current_account}@gmail.com.txt"
 COMMA_SEPARATED_KEY_FILE="comma_separated_keys_${EMAIL_USERNAME}.txt"
 SECONDS=0
 DELETION_LOG="project_deletion_$(date +%Y%m%d_%H%M%S).log"
