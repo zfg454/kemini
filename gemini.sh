@@ -8,11 +8,11 @@ EMAIL_USERNAME="momo${RANDOM_CHARS}${TIMESTAMP:(-4)}"
 RANDOM_PREFIX_PART=$(cat /dev/urandom | tr -dc 'a-z' | fold -w 5 | head -n 1)
 RANDOM_SUFFIX_PART=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 3 | head -n 1)
 PROJECT_PREFIX="${RANDOM_PREFIX_PART}Vul${RANDOM_SUFFIX_PART}"
-TOTAL_PROJECTS=50  # 默认项目数 (可能会根据配额检查结果自动调整)
+TOTAL_PROJECTS=49  # 默认项目数 (可能会根据配额检查结果自动调整)
 MAX_PARALLEL_JOBS=20  # 默认设置为20
 MAX_RETRY_ATTEMPTS=3  # 重试次数
 # 只保留纯密钥和逗号分隔密钥文件
-PURE_KEY_FILE="key.txt"
+PURE_KEY_FILE="${EMAIL_USERNAME}.txt"
 COMMA_SEPARATED_KEY_FILE="comma_separated_keys_${EMAIL_USERNAME}.txt"
 SECONDS=0
 DELETION_LOG="project_deletion_$(date +%Y%m%d_%H%M%S).log"
